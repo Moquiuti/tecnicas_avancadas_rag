@@ -1,6 +1,6 @@
-# ? EXECUTE ESTE COMANDO (SOLUÇÃO COMPLETA)
+# ğŸ¯ EXECUTE ESTE COMANDO (SOLUÃ‡ÃƒO COMPLETA)
 
-## ? Método Mais Simples - Execute e Aguarde:
+## âš¡ MÃ©todo Mais Simples - Execute e Aguarde:
 
 ```powershell
 cd C:\ia\rag
@@ -9,38 +9,38 @@ python setup_completo.py
 ```
 
 **Este script vai:**
-1. ? Verificar se o Ollama está instalado
-2. ? Baixar o modelo llama3.2:1b (1.3 GB, ~15 min)
-3. ? Executar um teste automático
-4. ? Mostrar a resposta do modelo
+1. âœ… Verificar se o Ollama estÃ¡ instalado
+2. ğŸ“¥ Baixar o modelo llama3.2:1b (1.3 GB, ~15 min)
+3. ğŸ§ª Executar um teste automÃ¡tico
+4. âœ… Mostrar a resposta do modelo
 
 ---
 
-## ? Status do Download Atual
+## ğŸ“Š Status do Download Atual
 
-O download está em **56%** (739 MB de 1.3 GB baixados).
+O download estÃ¡ em **56%** (739 MB de 1.3 GB baixados).
 
-Para continuar o download que já estava em andamento:
+Para continuar o download que jÃ¡ estava em andamento:
 
 ```powershell
 & "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" pull llama3.2:1b
 ```
 
-Aguarde até aparecer "success" ?
+Aguarde atÃ© aparecer "success" âœ…
 
 ---
 
-## ? Verificar se o Modelo já foi Baixado
+## ğŸ” Verificar se o Modelo jÃ¡ foi Baixado
 
 ```powershell
 & "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" list
 ```
 
-**Se aparecer `llama3.2:1b` na lista** = ? Pronto para usar!
+**Se aparecer `llama3.2:1b` na lista** = âœ… Pronto para usar!
 
 ---
 
-## ? Executar Teste (Após Download Completo)
+## ğŸš€ Executar Teste (ApÃ³s Download Completo)
 
 ```powershell
 cd C:\ia\rag
@@ -50,44 +50,44 @@ python teste_ollama.py
 
 ---
 
-## ? Arquivos Criados para Você
+## ğŸ“ Arquivos Criados para VocÃª
 
-| Arquivo | Descrição |
+| Arquivo | DescriÃ§Ã£o |
 |---------|-----------|
-| `setup_completo.py` | ? **Execute este!** Faz tudo automaticamente |
+| `setup_completo.py` | â­ **Execute este!** Faz tudo automaticamente |
 | `teste_ollama.py` | Teste simples do modelo |
 | `setup-ollama.ps1` | Script PowerShell para download |
 | `activate-ollama.ps1` | Adiciona Ollama ao PATH |
 | `COMO-EXECUTAR.md` | Guia detalhado |
-| `GUIA-OLLAMA.md` | Documentação completa |
+| `GUIA-OLLAMA.md` | DocumentaÃ§Ã£o completa |
 
 ---
 
-## ?? Problema Atual
+## âš ï¸ Problema Atual
 
-O erro que você está vendo:
+O erro que vocÃª estÃ¡ vendo:
 ```
 ollama._types.ResponseError: model 'llama3.2:1b' not found (status code: 404)
 ```
 
-**Significa:** O modelo ainda não terminou de baixar.
+**Significa:** O modelo ainda nÃ£o terminou de baixar.
 
-**Solução:** Aguarde o download terminar usando um dos métodos acima.
-
----
-
-## ? Por Que o Download Demora?
-
-- ? Tamanho: **1.3 GB** (modelo completo)
-- ? Velocidade: Depende da sua internet
-- ?? Tempo estimado: **8-15 minutos** restantes
+**SoluÃ§Ã£o:** Aguarde o download terminar usando um dos mÃ©todos acima.
 
 ---
 
-## ? COMANDO FINAL (Copie e Cole):
+## ğŸ’¡ Por Que o Download Demora?
+
+- ğŸ“¦ Tamanho: **1.3 GB** (modelo completo)
+- ğŸŒ Velocidade: Depende da sua internet
+- â±ï¸ Tempo estimado: **8-15 minutos** restantes
+
+---
+
+## âœ… COMANDO FINAL (Copie e Cole):
 
 ```powershell
-# Este é o comando mais simples - faz tudo automaticamente
+# Este Ã© o comando mais simples - faz tudo automaticamente
 cd C:\ia\rag ; .\.venv\Scripts\Activate.ps1 ; python setup_completo.py
 ```
 
@@ -106,15 +106,15 @@ cd C:\ia\rag ; .\.venv\Scripts\Activate.ps1 ; python teste_ollama.py
 
 ---
 
-## ? O Que Esperar Quando Funcionar
+## ğŸ¯ O Que Esperar Quando Funcionar
 
-Você verá algo como:
+VocÃª verÃ¡ algo como:
 
 ```
-RAG (Retrieval-Augmented Generation) é uma técnica que combina 
-busca de informações com geração de texto para produzir respostas 
+RAG (Retrieval-Augmented Generation) Ã© uma tÃ©cnica que combina 
+busca de informaÃ§Ãµes com geraÃ§Ã£o de texto para produzir respostas 
 mais precisas e contextualizadas.
 ```
 
-? **Sucesso!** Seu Ollama está funcionando localmente, sem custos! ?
+âœ… **Sucesso!** Seu Ollama estÃ¡ funcionando localmente, sem custos! ğŸ‰
 

@@ -1,23 +1,23 @@
-# ? Projeto RAG - Retrieval-Augmented Generation
+# 🤖 Projeto RAG - Retrieval-Augmented Generation
 
-Sistema de IA local usando Ollama e LangChain para implementa��o de RAG (Retrieval-Augmented Generation).
+Sistema de IA local usando Ollama e LangChain para implementação de RAG (Retrieval-Augmented Generation).
 
-## ? Sobre o Projeto
+## 📋 Sobre o Projeto
 
 Este projeto permite executar modelos de linguagem **localmente**, sem custos de API, usando:
 - **Ollama** - Para rodar LLMs localmente
-- **LangChain** - Framework para construir aplica��es com LLMs
-- **RAG** - T�cnica para melhorar respostas com contexto espec�fico
+- **LangChain** - Framework para construir aplicações com LLMs
+- **RAG** - Técnica para melhorar respostas com contexto específico
 
-## ? Requisitos
+## ✅ Requisitos
 
 - Python 3.10+
 - Ollama instalado
 - 8GB+ RAM (16GB recomendado para modelos maiores)
 
-## ? Instala��o
+## 🚀 Instalação
 
-### 1. Clone o reposit�rio
+### 1. Clone o repositório
 ```bash
 git clone <seu-repositorio>
 cd rag
@@ -29,12 +29,12 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1  # Windows PowerShell
 ```
 
-### 3. Instale as depend�ncias
+### 3. Instale as dependências
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure as vari�veis de ambiente
+### 4. Configure as variáveis de ambiente
 ```bash
 # Copie o exemplo e edite com suas chaves
 copy .env.example .env
@@ -52,7 +52,7 @@ ollama pull llama3.2:1b    # Modelo pequeno (1.3 GB)
 ollama pull llama3.2:3b    # Modelo melhor (2 GB)
 ```
 
-## ? Testes Dispon�veis
+## 🧪 Testes Disponíveis
 
 ### Teste simples com Ollama
 ```bash
@@ -64,44 +64,44 @@ python teste_ollama.py
 python exemplo_rag_completo.py
 ```
 
-### M�ltiplas perguntas
+### Múltiplas perguntas
 ```bash
 python teste_multiplas_perguntas.py
 ```
 
-### Setup autom�tico
+### Setup automático
 ```bash
 python setup_completo.py
 ```
 
-## ? Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 rag/
-??? .env                          # Vari�veis de ambiente (n�o commitado)
-??? .gitignore                    # Arquivos ignorados pelo Git
-??? requirements.txt              # Depend�ncias Python
-??? teste_ollama.py               # Teste simples
-??? exemplo_rag_completo.py       # Exemplo RAG real
-??? teste_multiplas_perguntas.py  # Testes variados
-??? setup_completo.py             # Setup automatizado
-??? arquivo_*.py                  # Scripts de processamento
-??? rag_*.py                      # Scripts RAG
-??? docs/                         # Documenta��o
-    ??? GUIA-OLLAMA.md
-    ??? PROXIMOS-PASSOS.md
-    ??? COMANDOS-RAPIDOS-OLLAMA.md
-    ??? RESUMO-CONQUISTAS.md
+├── .env                          # Variáveis de ambiente (não commitado)
+├── .gitignore                    # Arquivos ignorados pelo Git
+├── requirements.txt              # Dependências Python
+├── teste_ollama.py               # Teste simples
+├── exemplo_rag_completo.py       # Exemplo RAG real
+├── teste_multiplas_perguntas.py  # Testes variados
+├── setup_completo.py             # Setup automatizado
+├── arquivo_*.py                  # Scripts de processamento
+├── rag_*.py                      # Scripts RAG
+└── docs/                         # Documentação
+    ├── GUIA-OLLAMA.md
+    ├── PROXIMOS-PASSOS.md
+    ├── COMANDOS-RAPIDOS-OLLAMA.md
+    └── RESUMO-CONQUISTAS.md
 ```
 
-## ? Exemplos de Uso
+## 🎯 Exemplos de Uso
 
 ### Exemplo 1: Pergunta Simples
 ```python
 from langchain_ollama import ChatOllama
 
 llm = ChatOllama(model="llama3.2:1b")
-resposta = llm.invoke("O que � RAG?")
+resposta = llm.invoke("O que é RAG?")
 print(resposta.content)
 ```
 
@@ -121,19 +121,19 @@ prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | llm
 
 resposta = chain.invoke({
-    "contexto": "RAG combina busca e gera��o de texto.",
-    "pergunta": "O que � RAG?"
+    "contexto": "RAG combina busca e geração de texto.",
+    "pergunta": "O que é RAG?"
 })
 ```
 
-## ? Documenta��o
+## 📚 Documentação
 
 - [Guia do Ollama](GUIA-OLLAMA.md)
-- [Pr�ximos Passos](PROXIMOS-PASSOS.md)
-- [Comandos R�pidos](COMANDOS-RAPIDOS-OLLAMA.md)
+- [Próximos Passos](PROXIMOS-PASSOS.md)
+- [Comandos Rápidos](COMANDOS-RAPIDOS-OLLAMA.md)
 - [Resumo de Conquistas](RESUMO-CONQUISTAS.md)
 
-## ? Comandos �teis
+## 🔧 Comandos Úteis
 
 ### Gerenciar Modelos Ollama
 ```bash
@@ -149,58 +149,58 @@ pip install -r requirements.txt --upgrade  # Atualizar deps
 pip list                                   # Listar instalados
 ```
 
-## ? Troubleshooting
+## 🐛 Troubleshooting
 
 ### Erro: "model not found"
-- O modelo n�o foi baixado. Execute: `ollama pull llama3.2:1b`
+- O modelo não foi baixado. Execute: `ollama pull llama3.2:1b`
 
 ### Erro: "OpenAI quota exceeded"
 - Use o Ollama (local) em vez da OpenAI
 - Execute: `python teste_ollama.py`
 
-### Ollama n�o encontrado
-- Verifique se est� instalado: `ollama --version`
-- Reinicie o terminal ap�s instala��o
+### Ollama não encontrado
+- Verifique se está instalado: `ollama --version`
+- Reinicie o terminal após instalação
 
-## ? Modelos Recomendados
+## 📊 Modelos Recomendados
 
 | Modelo | Tamanho | RAM | Qualidade | Uso |
 |--------|---------|-----|-----------|-----|
-| llama3.2:1b | 1.3 GB | 2 GB | ?? | Testes r�pidos |
-| llama3.2:3b | 2 GB | 4 GB | ??? | Uso geral |
-| llama3.1:8b | 4.7 GB | 8 GB | ???? | Alta qualidade |
-| codellama:7b | 3.8 GB | 6 GB | ???? | Programa��o |
+| llama3.2:1b | 1.3 GB | 2 GB | ⭐⭐ | Testes rápidos |
+| llama3.2:3b | 2 GB | 4 GB | ⭐⭐⭐ | Uso geral |
+| llama3.1:8b | 4.7 GB | 8 GB | ⭐⭐⭐⭐ | Alta qualidade |
+| codellama:7b | 3.8 GB | 6 GB | ⭐⭐⭐⭐ | Programação |
 
-## ? Contribuindo
+## 🤝 Contribuindo
 
 1. Fork o projeto
 2. Crie uma branch: `git checkout -b feature/nova-feature`
-3. Commit suas mudan�as: `git commit -m 'Adiciona nova feature'`
+3. Commit suas mudanças: `git commit -m 'Adiciona nova feature'`
 4. Push: `git push origin feature/nova-feature`
 5. Abra um Pull Request
 
-## ?? Seguran�a
+## ⚠️ Segurança
 
-- **NUNCA** fa�a commit do arquivo `.env`
+- **NUNCA** faça commit do arquivo `.env`
 - **NUNCA** compartilhe suas chaves de API
-- O `.gitignore` est� configurado para proteger dados sens�veis
+- O `.gitignore` está configurado para proteger dados sensíveis
 
-## ? Licen�a
+## 📝 Licença
 
-Este projeto � de c�digo aberto para fins educacionais.
+Este projeto é de código aberto para fins educacionais.
 
-## ? Agradecimentos
+## 🙏 Agradecimentos
 
-- [Ollama](https://ollama.com/) - Por tornar IA local acess�vel
-- [LangChain](https://python.langchain.com/) - Framework incr�vel
+- [Ollama](https://ollama.com/) - Por tornar IA local acessível
+- [LangChain](https://python.langchain.com/) - Framework incrível
 - [Meta AI](https://ai.meta.com/) - Modelos Llama
 
-## ? Suporte
+## 📞 Suporte
 
-- Issues: Abra uma issue neste reposit�rio
-- Documenta��o: Veja os arquivos `.md` na pasta do projeto
+- Issues: Abra uma issue neste repositório
+- Documentação: Veja os arquivos `.md` na pasta do projeto
 
 ---
 
-**Desenvolvido com ?? para aprendizado de IA**
+**Desenvolvido com ❤️ para aprendizado de IA**
 
