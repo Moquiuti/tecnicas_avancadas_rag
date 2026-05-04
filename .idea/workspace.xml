@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50269d9e-dc94-4681-bfcc-161bd07d7472" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/atividade_docloaders_MELHORADO.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atividade_docloaders_chunking_embeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_faiss_persistido.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gerar_pdf_exemplo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777558434972</updated>
       <workItem from="1777558436658" duration="12590000" />
-      <workItem from="1777898445829" duration="3297000" />
+      <workItem from="1777898445829" duration="4395000" />
     </task>
     <servers />
   </component>
