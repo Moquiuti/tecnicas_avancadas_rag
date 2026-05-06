@@ -1,0 +1,300 @@
+(.venv) PS C:\ia\rag> python avaliacao_rag_qa_eval.py
+================================================================================
+? AVALIAÇÃO AUTOMATIZADA DE PIPELINE RAG
+================================================================================
+? Modelo LLM local: llama3.2:3b
+? Modelo de embeddings local: bge-m3
+? Diretório PDFs: C:\ia\rag\pdfs
+? VectorStore: C:\ia\rag\vectorstore_faiss_eval
+
+? LLM e embeddings locais configurados.
+
+================================================================================
+? ETAPA 1: CARREGANDO DOCUMENTOS
+================================================================================
+? PDF carregado: GTB_gold_Nov23.pdf | páginas: 24
+? PDF carregado: GTB_platinum_Nov23.pdf | páginas: 29
+? PDF carregado: GTB_standard_Nov23.pdf | páginas: 6
+? PDF carregado: teste_arquivo_01.pdf | páginas: 1
+? PDF carregado: Ursacol.pdf | páginas: 9
+? TXTs carregados: 3
+
+? Total de documentos carregados: 72
+? Prévia do primeiro documento:
+1
+Versão: novembro 2023
+2021
+
+
+
+Programa de Cartão da Edição Mastercard Gold
+
+Guia de Benefícios
+
+Informações importantes. Leia e guarde as informações.
+
+Este Guia de Benefícios contém informações detalhadas sobre serviços abrangentes de viagem, seguros
+e assistência aos quais você terá acesso como portador de cartão preferencial. Esses benefícios e serviços
+estão em vigor para portadores do cartão Mastercard Gold elegível a partir de 1 de Novembro de 2023.
+Este Guia substitui qua
+
+================================================================================
+?? ETAPA 2: REALIZANDO CHUNKING
+================================================================================
+? Total de chunks gerados: 274
+? Prévia do primeiro chunk:
+1
+Versão: novembro 2023
+2021
+
+
+
+Programa de Cartão da Edição Mastercard Gold
+
+Guia de Benefícios
+
+Informações importantes. Leia e guarde as informações.
+
+Este Guia de Benefícios contém informações detalhadas sobre serviços abrangentes de viagem, seguros
+e assistência aos quais você terá acesso como portador de cartão preferencial. Esses benefícios e serviços
+estão em vigor para portadores do cartão Mastercard Gold elegível a partir de 1 de Novembro de 2023.
+Este Guia substitui qua
+
+================================================================================
+? ETAPA 3: CRIANDO/CARREGANDO VECTORSTORE FAISS
+================================================================================
+?? Criando novo VectorStore FAISS...
+? VectorStore salvo em disco.
+? Retriever configurado com k=3.
+
+================================================================================
+? ETAPA 4: PREPARANDO DATASET MANUAL DE AVALIAÇÃO
+================================================================================
+? Dataset manual criado com 5 perguntas.
+- O cartão corporativo pode ser usado para compras pessoais?
+- O que acontece com despesas sem comprovante?
+- Viagens corporativas precisam de aprovação?
+- O que é necessário no processo de compras corporativas?
+- Fornecedores precisam estar cadastrados antes da contratação?
+
+================================================================================
+? ETAPA 5: CONFIGURANDO GERAÇÃO SEM RAG
+================================================================================
+? Chain sem RAG configurada.
+
+================================================================================
+? ETAPA 6: CONFIGURANDO GERAÇÃO COM RAG
+================================================================================
+? Chain com RAG configurada.
+
+================================================================================
+? ETAPA 7: CONFIGURANDO QA-EVAL
+================================================================================
+? Imports realizados via langchain_classic.
+? QAEvalChain configurado.
+
+================================================================================
+? AVALIANDO PIPELINE: SEM RAG
+================================================================================
+
+? Pergunta: O cartão corporativo pode ser usado para compras pessoais?
+? Resposta gerada:
+Em geral, os cartões corporativos são destinados a serem usados apenas para transações relacionadas ao negócio ou à empresa que o emitiu. Usar um cartão corporativo para compras pessoais pode não ser a melhor ideia.
+
+Aqui estão algumas razões pelas quais você deve evitar usar seu cartão corporativo para compras pessoais:
+
+1.  **Desvios financeiros**: Se você usar seu cartão corporativo para compras pessoais, pode criar uma oportunidade para desvios financeiros, como gastar dinheiro que não é do negócio.
+2.  **Perda de credibilidade**: Usar um cartão corporativo para compras pessoais pode prejudicar sua credibilidade e reputação profissional.
+3.  **Impostos e taxas**: Dependendo da legislação local, você pode ser responsabilizado por impostos e taxas sobre as transações realizadas com o cartão corporativo.
+
+Se você precisa comprar algo para uso pessoal, é recomendável usar um cartão de crédito ou débito pessoal.
+
+? Pergunta: O que acontece com despesas sem comprovante?
+? Resposta gerada:
+Em geral, as despesas sem comprovante podem gerar problemas para o contribuinte, pois não há documento oficial que comprove a realização da despesa.
+
+No Brasil, de acordo com a Receita Federal do Brasil (RFB), as despesas sem comprovante são consideradas "despesas presumidas" e devem ser declaradas no Imposto de Renda. Isso significa que o contribuinte deve informar as despesas em sua declaração de imposto, mesmo não tendo um documento oficial que comprove a realização da despesa.
+
+Se o contribuinte não declarar as despesas sem comprovante no Imposto de Renda, ele pode ser considerado "desonesto" e enfrentar sanções, como:
+
+* Multas: A RFB pode aplicar multas para aqueles que não declaram as despesas sem comprovante.
+* Juros: O contribuinte também pode ser obrigado a pagar juros sobre o valor das despesas não declaradas.
+* Penalidades: Em casos graves, o contribuinte pode ser considerado "desonesto" e enfrentar penalidades, como a perda de benefícios fiscais ou até mesmo a anulação da declaração de imposto.
+
+É importante lembrar que as despesas sem comprovante podem incluir itens como:
+
+* Compras pessoais
+* Viagens
+* Aluguel de imóveis
+* Outras despesas pessoais
+
+Para evitar problemas, é recomendável que os contribuintes mantenham registros precisos e detalhados das suas despesas, incluindo comprovantes de pagamento e recibos.
+
+? Pergunta: Viagens corporativas precisam de aprovação?
+? Resposta gerada:
+Sim, viagens corporativas geralmente precisam de aprovação antes de serem realizadas. Isso é comum em empresas que têm políticas de viagem para garantir a segurança, eficiência e produtividade das viagens.
+
+A aprovação de viagem pode incluir:
+
+1. Revisão da justificativa da viagem: Para garantir que a viagem seja necessária e não seja apenas uma indulgência.
+2. Verificação do orçamento: Para garantir que o custo da viagem esteja dentro do orçamento da empresa.
+3. Aprovação do itinerário: Para garantir que o itinerário seja seguro e eficiente.
+4. Revisão das despesas: Para garantir que as despesas relacionadas à viagem sejam justificadas e pagas corretamente.
+
+A aprovação de viagem pode ser feita por diferentes pessoas, como:
+
+* O gerente ou supervisor do funcionário que está viajando.
+* A equipe de recursos humanos da empresa.
+* O departamento financeiro da empresa.
+
+É importante lembrar que as políticas de viagem podem variar dependendo da empresa e do setor em que a empresa opera.
+
+? Pergunta: O que é necessário no processo de compras corporativas?
+? Resposta gerada:
+No processo de compras corporativas, há vários passos e requisitos importantes para garantir que as compras sejam feitas de forma eficiente e segura. Aqui estão alguns dos principais elementos necessários:
+
+1. **Política de Compras**: Uma política clara e bem definida que estabeleça os critérios, procedimentos e objetivos da compra corporativa.
+2. **Registro de Procuradores**: Um registro atualizado de todos os procuradores autorizados a realizar compras, incluindo suas credenciais e autorização.
+3. **Requisição de Compras**: Uma requisição clara e detalhada do produto ou serviço necessário, incluindo o número de unidades necessárias e prazo para entrega.
+4. **Orçamento e Presuposto**: Um orçamento apropriado e um presuposto claro para cada compra, considerando os limites de custo estabelecidos pela política de compras.
+5. **Avaliação de Vendedores**: Uma avaliação cuidadosa dos vendedores potenciais, incluindo sua reputação, histórico de fornecimento e preços competitivos.
+6. **Contrato de Compra**: Um contrato de compra claro e detalhado que defina os termos e condições da venda, incluindo o preço, prazo de entrega e outras cláusulas importantes.
+7. **Pagamento e Recebimento**: Um sistema seguro e eficiente para realizar pagamentos e receber mercadorias ou serviços.
+8. **Controle de Custos**: Um controle rigoroso dos custos de compra para garantir que as compras sejam feitas dentro do orçamento alocado.
+9. **Comunicação Clara**: Comunicação clara e transparente entre os departamentos da empresa, os vendedores e os procuradores.
+10. **Monitoramento e Avaliação**: Um monitoramento regular das compras para garantir que sejam feitas de forma eficiente e segura, e uma avaliação contínua da política de compras e procedimentos.
+
+Esses são apenas alguns dos principais elementos necessários no processo de compras corporativas. A empresa deve adaptar esses requisitos às suas próprias necessidades e objetivos específicos.
+
+? Pergunta: Fornecedores precisam estar cadastrados antes da contratação?
+? Resposta gerada:
+Sim, em muitos casos, os fornecedores precisam estar cadastrados antes de serem contratados por uma empresa ou organização.
+
+O cadastro dos fornecedores é um processo que envolve a coleta e verificação de informações sobre o fornecedor, como:
+
+*   Nome e endereço
+*   Tipo de empresa (pessoa jurídica, microempreendedor, etc.)
+*   Atividade econômica
+*   Histórico de pagamento e crédito
+*   Certificações e credenciais
+
+O cadastro dos fornecedores é importante para garantir que as empresas estejam trabalhando com fornecedores confiáveis e respeitadores das leis e regulamentações aplicáveis. Além disso, o cadastro também ajuda a reduzir o risco de fraude e evasão fiscal.
+
+No Brasil, por exemplo, os fornecedores devem estar cadastrados no Cadastro Nacional de Pessoas Físicas (CNPJ) ou no Cadastro Nacional de Empresas (CNE), dependendo da natureza jurídica da empresa. Além disso, também é necessário verificar a credibilidade e a reputação do fornecedor antes de contratar seus serviços.
+
+Em resumo, o cadastro dos fornecedores é um passo importante antes de serem contratados, pois ajuda a garantir que as empresas estejam trabalhando com fornecedores confiáveis e respeitadores das leis e regulamentações aplicáveis.
+
+? Comparando respostas geradas com gabaritos usando QAEvalChain...
+
+================================================================================
+? AVALIANDO PIPELINE: COM RAG
+================================================================================
+
+? Pergunta: O cartão corporativo pode ser usado para compras pessoais?
+? Resposta gerada:
+Não, o cartão corporativo não pode ser utilizado para compras pessoais.
+
+? Pergunta: O que acontece com despesas sem comprovante?
+? Resposta gerada:
+De acordo com a política de Cartão Corporativo, despesas sem comprovante poderão ser recusadas e cobradas do colaborador.
+
+? Pergunta: Viagens corporativas precisam de aprovação?
+? Resposta gerada:
+Sim, viagens corporativas precisam ser previamente aprovadas pelo gestor.
+
+? Pergunta: O que é necessário no processo de compras corporativas?
+? Resposta gerada:
+De acordo com a política de cartão corporativo, é necessário um comprovante fiscal para todas as despesas. Além disso, não é permitido utilizar o cartão para compras pessoais e despesas sem comprovante poderão ser recusadas e cobradas do colaborador.
+
+? Pergunta: Fornecedores precisam estar cadastrados antes da contratação?
+? Resposta gerada:
+Não encontrei a informação nos documentos fornecidos.
+
+? Comparando respostas geradas com gabaritos usando QAEvalChain...
+
+================================================================================
+? RESULTADOS - SEM RAG
+================================================================================
+
+Resultado 1:
+{'results': 'INCORRECT'}
+
+Resultado 2:
+{'results': 'INCORRECT\n\nA resposta do aluno está muito completa e detalhada, mas não contém a informação essencial de que as despesas sem comprovante são consideradas "despesas presumidas" e devem ser declaradas no Imposto de Renda. A resposta correta é mais concisa e direta, apenas mencionando que as despesas sem comprovante podem gerar problemas para o contribuinte.'}
+
+Resultado 3:
+{'results': "INCORRECT\n\nThe student's answer provides more information than the true answer and includes additional details that are not present in the true answer, such as the specific steps involved in the approval process and the different people who can approve the trip. While the student's answer is factually accurate, it does not match the concise and simplified version provided in the true answer."}
+
+Resultado 4:
+{'results': 'INCORRECT\n\nA resposta do aluno contém muitos detalhes adicionais que não estão presentes na resposta correta. Embora a resposta correta seja concisa e contenha apenas as informações essenciais, a resposta do aluno inclui uma lista de 10 itens com descrições detalhadas, o que vai além da resposta correta.'}
+
+Resultado 5:
+{'results': "INCORRECT\n\nThe student's answer contains more information than the true answer, but it also includes some extra details that are not present in the true answer. The true answer only states that fornecedores devem estar cadastrados antes da contratação, without providing additional context or explanations."}
+
+? Acurácia estimada: 0.00%
+
+================================================================================
+? RESULTADOS - COM RAG
+================================================================================
+
+Resultado 1:
+{'results': "INCORRECT\n\nThe student answer states that the corporate card cannot be used for personal purchases, but the true answer also includes a clarification that it should only be used for work-related expenses. The student's answer is missing this important nuance."}
+
+Resultado 2:
+{'results': 'QUESTION: O que acontece com despesas sem comprovante?\nSTUDENT ANSWER: De acordo com a política de Cartão Corporativo, despesas sem comprovante poderão ser recusadas e cobradas do colaborador.\nTRUE ANSWER: Despesas sem comprovante podem ser recusadas e cobradas do colaborador.\nGRADE: CORRECT'}
+
+Resultado 3:
+{'results': 'INCORRECT\n\nThe student\'s answer is missing the period at the end of the sentence, but more importantly, it contains an extra word "ser" that is not present in the true answer.'}
+
+Resultado 4:
+{'results': 'QUESTION: O que é necessário no processo de compras corporativas?\nSTUDENT ANSWER: De acordo com a política de cartão corporativo, é necessário um comprovante fiscal para todas as despesas. Além disso, não é permitido utilizar o cartão para compras pessoais e despesas sem comprovante poderão ser recusadas e cobradas do colaborador.\nTRUE ANSWER: O processo deve conter justificativa, fornecedor e comprovante.\nGRADE: INCORRECT'}
+
+Resultado 5:
+{'results': "INCORRECT\n\nThe student's answer is not providing factual information, but rather stating that they couldn't find the information in the documents provided. The true answer requires a specific fact about the registration of suppliers before contracting."}
+
+? Acurácia estimada: 20.00%
+
+================================================================================
+? ETAPA 8: GERANDO PARES AUTOMÁTICOS DE PERGUNTA/RESPOSTA
+================================================================================
+
+?? Gerando QA automático para chunk 1...
+{'doc': '1 \nVersão: novembro 2023 \n2021 \n \n \n \nPrograma de Cartão da Edição Mastercard Gold \n \nGuia de Benefícios \n \nInformações importantes. Leia e guarde as informações. \n \nEste Guia de Benefícios contém informações detalhadas sobre serviços abrangentes de viagem, seguros \ne assistência aos quais você terá acesso como portador de cartão preferencial. Esses benefícios e serviços \nestão em vigor para portadores do cartão Mastercard Gold elegível a partir de 1 de Novembro de 2023. \nEste Guia substitui qualquer guia ou comunicação de programa que você recebeu anteriormente. \n \nAs informações contidas neste documento são apresentadas somente com propósito informativo. Não \npretendem ser uma  descrição completa de todos os termos,  condições, limitações, exclusões ou outras \ndisposições de qualquer programa ou benefícios de seguro fornecidos por, para, ou emitidos para a \nMastercard.', 'qa_pairs': {'query': 'What is the effective date for the Programa de Cartão da Edição Mastercard Gold benefits to take effect?', 'answer': 'As of 1 de Novembro de 2023.'}}
+
+?? Gerando QA automático para chunk 2...
+{'doc': 'disposições de qualquer programa ou benefícios de seguro fornecidos por, para, ou emitidos para a \nMastercard. \n \nNome do Representante: MASTERCARD DO BRASIL LTDA. CNPJ 01.248.201/0001-75. Nome da \nSeguradora: AIG Seguros Brasil S.A - CNPJ/MF nº 33.040.981/0001- 50. Corretora: Apolix Corretora de \nSeguros LTDA - CNPJ 10.272.812/0001 -40. Seguro Garantia Estendida Original ? Processo SUSEP: \n15414.900511/2014-42. \n \nNo caso dos produtos Compra Protegida / Processo SUSEP:  15414.900240/2017-78 e Proteção de  \nPreço / Processo SUSEP: 15414.900240/2017-78. A MASTERCARD DO BRASIL LTDA é a \nSegurada e os portadores dos cartões serão os beneficiários. \n \nEsses benefícios são pagos pela bandeira do seu cartão. A MASTERCARD figura como mera \nrepresentante do contrato de seguros.  O registro deste plano na SUSEP não implica, por parte da', 'qa_pairs': {'query': 'Who is the issuer of the Mastercard program and what is their CNPJ number?', 'answer': 'MASTERCARD DO BRASIL LTDA., with a CNPJ number of 01.248.201/0001-75.'}}
+
+?? Gerando QA automático para chunk 3...
+{'doc': 'representante do contrato de seguros.  O registro deste plano na SUSEP não implica, por parte da \nautarquia, incentivo ou recomendação de sua comercialização. \n \nA cobertura dos seguros/benefícios ou serviços aqui descritos serão anulados, seja antes ou depois que \numa perda ou pedido de serviços forem efetuados, se você intencionalmente ocultar ou fizer \ninterpretação errônea de qualquer fato material ou circunstânc ia, ou fornecer informação fraudulenta \nrelativa aos planos de seguro ou outros serviços aqui descritos para: A Mastercard International, a \nEmpresa de Seguros, a instituição financeira que emitiu a Conta do cartão ou qualquer outra empresa \nque estiver prestando serviços e/ou administração em nome destes programas. \n \nPara dar entrada em uma ocorrência/sinistro ou para obter mais informações sobre qualquer um', 'qa_pairs': {'query': 'What happens if you intentionally misrepresent or provide false information about any material fact or circumstance related to your Mastercard International plan, in order to obtain coverage or services?', 'answer': 'Your coverage under the insurance/benefits or services described will be cancelled, whether before or after a loss or service is made, as a result of such intentional misrepresentation or false information.'}}
+
+?? Gerando QA automático para chunk 4...
+{'doc': 'Para dar entrada em uma ocorrência/sinistro ou para obter mais informações sobre qualquer um \ndesses serviços, ligue para o número gratuito do Mastercard Global  Service? específico para o seu país, \nou ligue a cobrar para os Estados Unidos no número 1-636-722-8881 (Português). \n \n?cartão? refere-se ao cartão Mastercard Gold. \n \n?portador de cartão?, ?você?, e ?seu? referem-se a um portador do cartão Mastercard Gold, que possui  \numa Conta Mastercard Gold elegível e cujo nome esteja gravado em relevo na superfície do cartão \nMastercard elegível Gold. \n \n?Cartões com funcionalidade múltipla? ou ?Combo" são compostos por um único plástico que combina a \nfuncionalidade de crédito e débito em um cartão. \n \n \nA seleção de benefícios em seu cartão Mastercard poderá variar de acordo com o emissor do cartão. Consulte sua \ninstituição financeira de emissão de cartões para obter mais detalhes.', 'qa_pairs': {'query': 'What is the contact number for the Mastercard Global Service in Portuguese, allowing callers to access information about services or make inquiries?', 'answer': '1-636-722-8881 (Português)'}}
+
+?? Gerando QA automático para chunk 5...
+{'doc': '2 \nVersão: novembro 2023 \n2021 \n \n \n \nGuia de Benefícios Mastercard \nBenefícios que estão sempre com você. \n \n \n \nÍndice \n \n \nContents \nPrograma de Cartão da Edição Mastercard Gold ................................ ................................ ...... 1 \nGuia de Benefícios Mastercard ................................ ................................ ............................ 2 \nÍndice ................................ ................................ ................................ ................................ .... 2 \nSeguro Garantia Estendida Original .............................................................................. 3 \nCompra Protegida ........................................................................................................ 8 \nProteção de Preço ....................................................................................................... 12', 'qa_pairs': {'query': 'What is the title of the guide presented in the document?', 'answer': 'Guia de Benefícios Mastercard'}}
+
+? Pares automáticos gerados:
+[{'doc': '1 \nVersão: novembro 2023 \n2021 \n \n \n \nPrograma de Cartão da Edição Mastercard Gold \n \nGuia de Benefícios \n \nInformações importantes. Leia e guarde as informações. \n \nEste Guia de Benefícios contém informações detalhadas sobre serviços abrangentes de viagem, seguros \ne assistência aos quais você terá acesso como portador de cartão preferencial. Esses benefícios e serviços \nestão em vigor para portadores do cartão Mastercard Gold elegível a partir de 1 de Novembro de 2023. \nEste Guia substitui qualquer guia ou comunicação de programa que você recebeu anteriormente. \n \nAs informações contidas neste documento são apresentadas somente com propósito informativo. Não \npretendem ser uma  descrição completa de todos os termos,  condições, limitações, exclusões ou outras \ndisposições de qualquer programa ou benefícios de seguro fornecidos por, para, ou emitidos para a \nMastercard.', 'qa_pairs': {'query': 'What is the effective date for the Programa de Cartão da Edição Mastercard Gold benefits to take effect?', 'answer': 'As of 1 de Novembro de 2023.'}}, {'doc': 'disposições de qualquer programa ou benefícios de seguro fornecidos por, para, ou emitidos para a \nMastercard. \n \nNome do Representante: MASTERCARD DO BRASIL LTDA. CNPJ 01.248.201/0001-75. Nome da \nSeguradora: AIG Seguros Brasil S.A - CNPJ/MF nº 33.040.981/0001- 50. Corretora: Apolix Corretora de \nSeguros LTDA - CNPJ 10.272.812/0001 -40. Seguro Garantia Estendida Original ? Processo SUSEP: \n15414.900511/2014-42. \n \nNo caso dos produtos Compra Protegida / Processo SUSEP:  15414.900240/2017-78 e Proteção de  \nPreço / Processo SUSEP: 15414.900240/2017-78. A MASTERCARD DO BRASIL LTDA é a \nSegurada e os portadores dos cartões serão os beneficiários. \n \nEsses benefícios são pagos pela bandeira do seu cartão. A MASTERCARD figura como mera \nrepresentante do contrato de seguros.  O registro deste plano na SUSEP não implica, por parte da', 'qa_pairs': {'query': 'Who is the issuer of the Mastercard program and what is their CNPJ number?', 'answer': 'MASTERCARD DO BRASIL LTDA., with a CNPJ number of 01.248.201/0001-75.'}}, {'doc': 'representante do contrato de seguros.  O registro deste plano na SUSEP não implica, por parte da \nautarquia, incentivo ou recomendação de sua comercialização. \n \nA cobertura dos seguros/benefícios ou serviços aqui descritos serão anulados, seja antes ou depois que \numa perda ou pedido de serviços forem efetuados, se você intencionalmente ocultar ou fizer \ninterpretação errônea de qualquer fato material ou circunstânc ia, ou fornecer informação fraudulenta \nrelativa aos planos de seguro ou outros serviços aqui descritos para: A Mastercard International, a \nEmpresa de Seguros, a instituição financeira que emitiu a Conta do cartão ou qualquer outra empresa \nque estiver prestando serviços e/ou administração em nome destes programas. \n \nPara dar entrada em uma ocorrência/sinistro ou para obter mais informações sobre qualquer um', 'qa_pairs': {'query': 'What happens if you intentionally misrepresent or provide false information about any material fact or circumstance related to your Mastercard International plan, in order to obtain coverage or services?', 'answer': 'Your coverage under the insurance/benefits or services described will be cancelled, whether before or after a loss or service is made, as a result of such intentional misrepresentation or false information.'}}, {'doc': 'Para dar entrada em uma ocorrência/sinistro ou para obter mais informações sobre qualquer um \ndesses serviços, ligue para o número gratuito do Mastercard Global  Service? específico para o seu país, \nou ligue a cobrar para os Estados Unidos no número 1-636-722-8881 (Português). \n \n?cartão? refere-se ao cartão Mastercard Gold. \n \n?portador de cartão?, ?você?, e ?seu? referem-se a um portador do cartão Mastercard Gold, que possui  \numa Conta Mastercard Gold elegível e cujo nome esteja gravado em relevo na superfície do cartão \nMastercard elegível Gold. \n \n?Cartões com funcionalidade múltipla? ou ?Combo" são compostos por um único plástico que combina a \nfuncionalidade de crédito e débito em um cartão. \n \n \nA seleção de benefícios em seu cartão Mastercard poderá variar de acordo com o emissor do cartão. Consulte sua \ninstituição financeira de emissão de cartões para obter mais detalhes.', 'qa_pairs': {'query': 'What is the contact number for the Mastercard Global Service in Portuguese, allowing callers to access information about services or make inquiries?', 'answer': '1-636-722-8881 (Português)'}}, {'doc': '2 \nVersão: novembro 2023 \n2021 \n \n \n \nGuia de Benefícios Mastercard \nBenefícios que estão sempre com você. \n \n \n \nÍndice \n \n \nContents \nPrograma de Cartão da Edição Mastercard Gold ................................ ................................ ...... 1 \nGuia de Benefícios Mastercard ................................ ................................ ............................ 2 \nÍndice ................................ ................................ ................................ ................................ .... 2 \nSeguro Garantia Estendida Original .............................................................................. 3 \nCompra Protegida ........................................................................................................ 8 \nProteção de Preço ....................................................................................................... 12', 'qa_pairs': {'query': 'What is the title of the guide presented in the document?', 'answer': 'Guia de Benefícios Mastercard'}}]
+
+================================================================================
+? ANÁLISE FINAL
+================================================================================
+Acurácia sem RAG: 0.00%
+Acurácia com RAG: 20.00%
+? O pipeline com RAG apresentou melhor desempenho na avaliação automatizada.
+
+Observações:
+- A avaliação automatizada com QAEvalChain depende da qualidade do LLM avaliador.
+- Como usamos modelo local por decisão de custo zero, os julgamentos podem não ser tão estáveis quanto com modelos maiores.
+- Ainda assim, a atividade demonstra o fluxo completo:
+  dataset ? geração de respostas ? comparação com gabarito ? métrica de acurácia.
+- Ajustes possíveis:
+  - alterar k do retriever;
+  - alterar chunk_size e chunk_overlap;
+  - testar outro modelo local no Ollama;
+  - melhorar o dataset de avaliação;
+  - usar embeddings diferentes;
+  - persistir os resultados em JSON/CSV.
+
+
+? ATIVIDADE DE AVALIAÇÃO RAG FINALIZADA.
