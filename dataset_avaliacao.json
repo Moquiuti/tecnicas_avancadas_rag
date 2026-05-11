@@ -1,0 +1,38 @@
+﻿[
+  {
+    "id": 1,
+    "category": "cartao",
+    "query": "O cartão corporativo pode ser usado para compras pessoais?",
+    "answer": "Não. O cartão corporativo deve ser utilizado apenas para despesas relacionadas ao trabalho."
+  },
+  {
+    "id": 2,
+    "category": "cartao",
+    "query": "O que acontece com despesas sem comprovante?",
+    "answer": "Despesas sem comprovante podem ser recusadas e cobradas do colaborador."
+  },
+  {
+    "id": 3,
+    "category": "reembolso",
+    "query": "Qual é o prazo para solicitar reembolso de despesas?",
+    "answer": "O reembolso de despesas deve ser solicitado em até 30 dias após a realização do gasto."
+  },
+  {
+    "id": 4,
+    "category": "viagens",
+    "query": "Viagens corporativas precisam de aprovação?",
+    "answer": "Sim. Viagens corporativas devem ser previamente aprovadas pelo gestor."
+  },
+  {
+    "id": 5,
+    "category": "compras",
+    "query": "O que deve conter o processo de compras corporativas?",
+    "answer": "O processo deve conter justificativa, fornecedor e comprovante."
+  },
+  {
+    "id": 6,
+    "category": "fornecedores",
+    "query": "Fornecedores precisam estar cadastrados antes da contratação?",
+    "answer": "Sim. Fornecedores devem estar cadastrados antes da contratação."
+  }
+]

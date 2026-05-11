@@ -1,0 +1,119 @@
+{
+  "modelo_llm": "llama3.2:3b",
+  "modelo_embeddings": "bge-m3",
+  "total_perguntas": 6,
+  "precisao_sem_rag": 0.16666666666666666,
+  "precisao_com_rag": 0.6666666666666666,
+  "score_medio_sem_rag": 0.3904,
+  "score_medio_com_rag": 0.5832666666666667,
+  "resultados": [
+    {
+      "query": "O cartão corporativo pode ser usado para compras pessoais?",
+      "answer": "Não. O cartão corporativo deve ser utilizado apenas para despesas relacionadas ao trabalho.",
+      "resposta_sem_rag": "Geralmente, os cartões corporativos são destinados a pagamentos relacionados à empresa e não devem ser usados para compras pessoais.",
+      "avaliacao_sem_rag": {
+        "score_similaridade": 0.4036,
+        "cobertura_termos": 0.1429,
+        "score_final": 0.2471,
+        "correto": false
+      },
+      "resposta_com_rag": "Não, o cartão corporativo não deve ser utilizado para compras pessoais.",
+      "avaliacao_com_rag": {
+        "score_similaridade": 0.716,
+        "cobertura_termos": 0.4286,
+        "score_final": 0.5436,
+        "correto": true
+      }
+    },
+    {
+      "query": "O que acontece com despesas sem comprovante?",
+      "answer": "Despesas sem comprovante podem ser recusadas e cobradas do colaborador.",
+      "resposta_sem_rag": "Em geral, as despesas sem comprovante podem ser consideradas incorretas ou fraudulentas, pois não há evidência para comprovar a realização da despesa.\n\nNesse caso, é possível que:\n\n*   A despesa seja negada ou rejeitada pelo órgão responsável pela gestão orçamentária;\n*   O responsável pela despesa seja condenado a devolver o valor despendido;\n*   Haja uma investigação para determinar a veracidade da despesa.\n\nÉ importante lembrar que as regras e procedimentos podem variar dependendo do órgão ou instituição.",
+      "avaliacao_sem_rag": {
+        "score_similaridade": 0.1948,
+        "cobertura_termos": 0.5,
+        "score_final": 0.3779,
+        "correto": false
+      },
+      "resposta_com_rag": "De acordo com a política de cartão corporativo, despesas sem comprovante poderão ser recusadas e cobradas do colaborador.",
+      "avaliacao_com_rag": {
+        "score_similaridade": 0.7292,
+        "cobertura_termos": 0.8333,
+        "score_final": 0.7917,
+        "correto": true
+      }
+    },
+    {
+      "query": "Qual é o prazo para solicitar reembolso de despesas?",
+      "answer": "O reembolso de despesas deve ser solicitado em até 30 dias após a realização do gasto.",
+      "resposta_sem_rag": "O prazo para solicitar reembolso de despesas pode variar dependendo do país, da empresa e do tipo de despesa. No Brasil, por exemplo, a Lei nº 11.941/2009 estabelece que os reembolsos devem ser solicitados dentro de 90 dias após o vencimento do prazo para apresentação das contas.\n\nNo entanto, é importante notar que cada empresa tem seu próprio prazo para solicitar reembolso de despesas. É recomendável verificar o contrato ou a política da empresa para saber o prazo específico.\n\nAlém disso, alguns exemplos de prazos comuns incluem:\n\n- 30 dias após o vencimento do prazo para apresentação das contas\n- 60 dias após o vencimento do prazo para apresentação das contas\n- 90 dias após o vencimento do prazo para apresentação das contas\n\nÉ sempre recomendável verificar a política da empresa e solicitar reembolso de despesas dentro do prazo estabelecido.",
+      "avaliacao_sem_rag": {
+        "score_similaridade": 0.0812,
+        "cobertura_termos": 0.6,
+        "score_final": 0.3925,
+        "correto": false
+      },
+      "resposta_com_rag": "O prazo para solicitar reembolso de despesas é até 30 dias após a realização do gasto.",
+      "avaliacao_com_rag": {
+        "score_similaridade": 0.7442,
+        "cobertura_termos": 0.8,
+        "score_final": 0.7777,
+        "correto": true
+      }
+    },
+    {
+      "query": "Viagens corporativas precisam de aprovação?",
+      "answer": "Sim. Viagens corporativas devem ser previamente aprovadas pelo gestor.",
+      "resposta_sem_rag": "Sim, viagens corporativas geralmente precisam de aprovação antes de serem autorizadas. Isso varia de acordo com a empresa e suas políticas específicas, mas é comum que as viagens sejam submetidas a uma revisão e aprovação por parte da gerência ou do departamento financeiro para garantir que elas estejam dentro dos limites orçamentários e de segurança da empresa.",
+      "avaliacao_sem_rag": {
+        "score_similaridade": 0.2442,
+        "cobertura_termos": 0.3333,
+        "score_final": 0.2977,
+        "correto": false
+      },
+      "resposta_com_rag": "Sim, viagens corporativas devem ser previamente aprovadas pelo gestor.",
+      "avaliacao_com_rag": {
+        "score_similaridade": 0.9857,
+        "cobertura_termos": 1.0,
+        "score_final": 0.9943,
+        "correto": true
+      }
+    },
+    {
+      "query": "O que deve conter o processo de compras corporativas?",
+      "answer": "O processo deve conter justificativa, fornecedor e comprovante.",
+      "resposta_sem_rag": "Um processo de compras corporativas eficaz deve conter os seguintes componentes:\n\n1. **Política de Compras**: Define as diretrizes e objetivos da política de compras, incluindo critérios para seleção de fornecedores, preços e prazos.\n2. **Regras de Acesso**: Estabelece regras para acesso a compras, incluindo autorização de compras, limites de crédito e requisitos de aprovação.\n3. **Cronograma de Compras**: Define o cronograma de compras, incluindo prazos para solicitações, aprovação e entrega de produtos ou serviços.\n4. **Critérios de Seleção**: Estabelece critérios para seleção de fornecedores, incluindo qualidade do produto ou serviço, preço, entrega e reputação do fornecedor.\n5. **Processo de Solicitação**: Define o processo de solicitação de compras, incluindo formulários, requisitos e prazos para a apresentação das propostas.\n6. **Avaliação de Propostas**: Estabelece um processo para avaliar as propostas recebidas, incluindo critérios de avaliação e responsáveis pela avaliação.\n7. **Negociações**: Define o processo de negociação com os fornecedores, incluindo limites de preço e condições de pagamento.\n8. **Contratação**: Estabelece o processo de contratação dos fornecedores, incluindo assinatura do contrato e aprovação da contratação.\n9. **Gestão de Contratos**: Define o processo de gestão de contratos, incluindo revisão e atualização dos termos e condições.\n10. **Monitoramento e Avaliação**: Estabelece um processo para monitorar e avaliar o desempenho dos fornecedores, incluindo métricas de desempenho e ação correctiva em caso de problemas.\n11. **Segurança e Conformidade**: Define o processo de segurança e conformidade, incluindo requisitos de segurança, regulamentações e normas.\n12. **Documentação**: Estabelece um processo para manter registros e documentação de todas as compras, incluindo contratos, propostas e avaliações.\n\nEsses componentes ajudam a garantir que o processo de compras corporativa seja eficiente, transparente e alinhado com os objetivos da organização.",
+      "avaliacao_sem_rag": {
+        "score_similaridade": 0.056,
+        "cobertura_termos": 0.6,
+        "score_final": 0.3824,
+        "correto": false
+      },
+      "resposta_com_rag": "De acordo com a Política de Cartão Corporativo, o processo de compras corporativas deve incluir:\n\n1. Comprovante fiscal para todas as despesas;\n2. Despesas sem comprovante podem ser recusadas e cobradas do colaborador.\n\nAlém disso, é importante verificar se a compra está dentro das Compras Cobertas, que são itens comprados integralmente com o cartão e/ou adquiridos com pontos ganhos através dos programas de recompensas relacionados ao seu cartão.",
+      "avaliacao_com_rag": {
+        "score_similaridade": 0.1566,
+        "cobertura_termos": 0.4,
+        "score_final": 0.3026,
+        "correto": false
+      }
+    },
+    {
+      "query": "Fornecedores precisam estar cadastrados antes da contratação?",
+      "answer": "Sim. Fornecedores devem estar cadastrados antes da contratação.",
+      "resposta_sem_rag": "Sim, em muitos países, incluindo o Brasil, é obrigatório que os fornecedores estejam cadastrados em órgãos governamentais ou instituições financeiras antes de serem contratados por uma empresa. Isso visa garantir a integridade e transparência das contratações.\n\nNo Brasil, por exemplo, a Lei nº 8.666/1993 (Lei Geral de Licitações) estabelece que os fornecedores devem estar cadastrados no Cadastro Nacional de Empresas (CNE) e no Sistema de Pagamento Eletrônico (SPE) para serem considerados aptos a participar de licitações.\n\nAlém disso, muitas empresas têm políticas internas que exigem que os fornecedores estejam cadastrados em órgãos governamentais ou instituições financeiras antes de serem contratados. Isso ajuda a garantir que as contratações sejam feitas de forma transparente e segura.\n\nNo entanto, é importante notar que as exigências específicas podem variar dependendo do país, estado ou município, além das políticas internas da empresa. É sempre recomendável verificar as regras e regulamentações locais antes de iniciar um processo de contratação.",
+      "avaliacao_sem_rag": {
+        "score_similaridade": 0.112,
+        "cobertura_termos": 1.0,
+        "score_final": 0.6448,
+        "correto": true
+      },
+      "resposta_com_rag": "Não encontrei a informação nos documentos fornecidos.",
+      "avaliacao_com_rag": {
+        "score_similaridade": 0.2241,
+        "cobertura_termos": 0.0,
+        "score_final": 0.0897,
+        "correto": false
+      }
+    }
+  ]
+}
